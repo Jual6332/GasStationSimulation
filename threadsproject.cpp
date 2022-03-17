@@ -49,13 +49,15 @@ int main() {
   arrayOfCars[2] = thirdCar;
   arrayOfCars[3] = fourthCar;
 
+  int totalGasFillupsAllCars = 0;
+
   for (int i=0; i<4; i++){
     fillUpWithGas(&arrayOfCars[i]);
     std::cout << arrayOfCars[i].numberOfFillups << std::endl;
+    totalGasFillupsAllCars++;
   }
 
-  fillUpWithGas(&arrayOfCars[0]);
-  std::cout << arrayOfCars[0].numberOfFillups << std::endl;
+  std::cout << "Total # of gas fillups: " << totalGasFillupsAllCars << std::endl;
 
   //std::thread(exec,0);
   
