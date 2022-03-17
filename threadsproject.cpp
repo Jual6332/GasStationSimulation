@@ -42,6 +42,7 @@ int main() {
   Car fourthCar;
   fourthCar.carID = 4;
 
+  // Array to Store Car Object Data
   Car arrayOfCars[ARRAY_LENGTH];
 
   arrayOfCars[0] = firstCar;
@@ -49,17 +50,18 @@ int main() {
   arrayOfCars[2] = thirdCar;
   arrayOfCars[3] = fourthCar;
 
-  int totalGasFillupsAllCars = 0;
+  int totalNumberOfGasFillupsAllCars = 0;
 
-  for (int i=0; i<4; i++){
-    fillUpWithGas(&arrayOfCars[i]);
-    std::cout << arrayOfCars[i].numberOfFillups << std::endl;
-    totalGasFillupsAllCars++;
+  while (totalNumberOfGasFillupsAllCars < 20){
+    for (int i=0; i<4; i++){
+      fillUpWithGas(&arrayOfCars[i]);
+      std::cout << arrayOfCars[i].numberOfFillups << std::endl;
+      totalNumberOfGasFillupsAllCars++;
+    }
   }
 
-  std::cout << "Total # of gas fillups: " << totalGasFillupsAllCars << std::endl;
-
-  //std::thread(exec,0);
+  // Print Total Number of Times that a Pump was used to fillup a Car with Gas
+  std::cout << "Total # of gas fillups: " << totalNumberOfGasFillupsAllCars << std::endl;
   
   std::cout << "Hello World!\n";
 }
