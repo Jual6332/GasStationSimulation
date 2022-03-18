@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <chrono>
 
-const int ARRAY_LENGTH = 9;
+const int ARRAY_LENGTH = 10;
 
 class Car {
   public:
@@ -43,10 +43,29 @@ int main() {
   firstCar.carID = 1;
   Car secondCar;
   secondCar.carID = 2;
+
   Car thirdCar;
   thirdCar.carID = 3;
+
   Car fourthCar;
   fourthCar.carID = 4;
+
+  Car fifthCar;
+  fifthCar.carID = 5;
+
+  Car sixthCar;
+  sixthCar.carID = 6;
+
+  Car seventhCar;
+  seventhCar.carID = 7;
+  Car eigthCar;
+  eigthCar.carID = 8;
+
+  Car ninthCar;
+  ninthCar.carID = 9;
+
+  Car tenthCar;
+  tenthCar.carID = 10;
 
   // Array to Store Car Object Data
   Car arrayOfCars[ARRAY_LENGTH];
@@ -56,13 +75,21 @@ int main() {
   arrayOfCars[2] = thirdCar;
   arrayOfCars[3] = fourthCar;
 
+  arrayOfCars[4] = fifthCar;
+  arrayOfCars[5] = sixthCar;
+  arrayOfCars[6] = seventhCar;
+  arrayOfCars[7] = eigthCar;
+
+  arrayOfCars[8] = ninthCar;
+  arrayOfCars[9] = tenthCar;
+
   GasPump gasPump1;
   GasPump gasPump2;
 
   int totalNumberOfGasFillupsAllCars = 0;
 
   while (totalNumberOfGasFillupsAllCars < 1000){
-    for (int i=0; i<9; i++){
+    for (int i=0; i<10; i++){
       if (totalNumberOfGasFillupsAllCars % 2 == 0){
         fillUpWithGas(&arrayOfCars[i],&gasPump1);
       } else {
